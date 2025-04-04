@@ -1,0 +1,120 @@
+.firm-section {
+	background: linear-gradient(
+		114deg,
+		#041731 -13.53%,
+		#0c2548 31.24%,
+		#183969 77.41%
+	);
+}
+.firm-title {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 32px;
+	color: var(--orange);
+	text-align: center;
+	font-family: var(--font-garamond);
+	font-size: 44px;
+	font-weight: 700;
+	line-height: 130%;
+	@include laptop {
+		margin-bottom: 64px;
+	}
+}
+.firm-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 32px 16px;
+	@include laptop {
+		gap: 16px;
+	}
+}
+.firm-item {
+	display: block;
+	width: 168px;
+	height: 364px;
+	&:nth-child(even) {
+		padding-top: 44px;
+	}
+
+	&:nth-child(odd) {
+		padding-bottom: 44px;
+	}
+	@include laptop {
+		width: 200px;
+		height: 372px;
+		&:nth-child(even) {
+			padding-top: 60px;
+		}
+
+		&:nth-child(odd) {
+			padding-bottom: 60px;
+		}
+	}
+	&:hover svg > path {
+		stroke: var(--blue);
+	}
+	&:hover .firm-img-wrap > svg > g > path {
+		stroke: var(--blue);
+	}
+}
+.firm-item-lines {
+	position: absolute;
+	top: 0;
+	right: 0;
+	& > svg > path {
+		transition: stroke 250ms var(--cubic);
+	}
+}
+.firm-img-wrap {
+	margin-bottom: 24px;
+	padding-top: 16px;
+	padding-right: 16px;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	& > svg {
+		width: 48px;
+		height: 48px;
+	}
+	& > svg > g > path {
+		transition: stroke 250ms var(--cubic);
+	}
+	@include laptop {
+		margin-bottom: 32px;
+		& > svg {
+			width: 56px;
+			height: 56px;
+		}
+	}
+}
+.firm-item-title {
+	margin-bottom: 18px;
+	padding-right: 16px;
+
+	color: var(--white);
+	text-align: right;
+	font-family: var(--font-sans);
+	font-size: 16px;
+	font-weight: 700;
+	transition: var(--transition-color);
+	.firm-item:hover & {
+		color: var(--blue);
+	}
+	@include laptop {
+		margin-bottom: 20px;
+		font-size: 20px;
+	}
+}
+.firm-item-text {
+	padding-right: 16px;
+	color: var(--white);
+	text-align: right;
+	font-family: var(--font-sans);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 150%;
+}

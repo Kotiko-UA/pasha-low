@@ -1,0 +1,133 @@
+.subscribe-section {
+	background: linear-gradient(180deg, #041731 0%, #081e3d 32%, #183969 65%);
+	padding-left: 24px;
+	padding-right: 24px;
+}
+.subscribe-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: start;
+
+	padding: 40px 24px;
+	border-radius: 0px 40px;
+	background: #fff;
+	box-shadow: -6px -10px 30px 0px rgba(255, 255, 255, 0.3),
+		10px 10px 30px 0px rgba(255, 255, 255, 0.1);
+
+	& > .section-title {
+		margin-bottom: 8px;
+		text-align: center;
+	}
+}
+.subscribe-logo {
+	margin-bottom: 16px;
+	& > svg {
+		width: 104px;
+		height: 104px;
+		margin: 0 auto;
+
+		@include laptop {
+			width: 174px;
+			height: 174px;
+		}
+	}
+	@include laptop {
+		margin-bottom: 24px;
+	}
+}
+.subscribe-test {
+	margin-bottom: 44px;
+
+	color: var(--main-text-col);
+	text-align: center;
+	font-family: var(--font-sans);
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 150%;
+
+	@include laptop {
+		margin-bottom: 40px;
+	}
+}
+.sub-form {
+	@include laptop {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 24px;
+	}
+}
+.sub-input-wrap {
+	position: relative;
+	& > svg {
+		width: 24px;
+		height: 24px;
+
+		position: absolute;
+		top: 16px;
+		left: 16px;
+
+		stroke: var(--black);
+	}
+}
+.sub-form-input {
+	display: block;
+	width: 280px;
+	padding: 16px 16px 16px 48px;
+	margin-bottom: 40px;
+	border-radius: 16px;
+	background-color: var(--light-blue);
+	border: 1px solid transparent;
+	transition: border 250ms var(--cubic);
+	&:hover {
+		border: 1px solid var(--blue);
+	}
+
+	&::placeholder {
+		color: var(--main-text-col);
+		font-family: var(--font-sans);
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 125%;
+	}
+	@include laptop {
+		margin-bottom: 0;
+		width: 400px;
+	}
+}
+.sub-button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 343px;
+	display: flex;
+	padding: 16px 44px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+
+	border: none;
+	border-radius: 16px;
+	background: var(--orange);
+	box-shadow: 4px 8px 20px 0px rgba(240, 150, 31, 0.12);
+
+	color: var(--white);
+	text-align: right;
+	font-family: var(--font-sans);
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 130%;
+	opacity: 1;
+	transition: var(--transition-opacity);
+	@include hover {
+		opacity: 0.8;
+	}
+	& > span {
+		padding: 6px;
+		border-radius: 50px;
+		background: #fcba63;
+		transform: rotateZ(-90deg);
+	}
+}

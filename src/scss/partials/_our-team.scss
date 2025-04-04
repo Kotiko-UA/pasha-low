@@ -1,0 +1,142 @@
+.ourteam-section {
+	height: 875px;
+	overflow-x: clip;
+	padding-bottom: 68px;
+	@include laptop {
+		height: 612px;
+		padding-bottom: 100px;
+	}
+}
+.ourteam-container {
+	@include laptop {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 44px;
+	}
+}
+.ourteam-title-wrap {
+	margin-bottom: 24px;
+	@include laptop {
+		margin-bottom: 0;
+		max-width: 435px;
+	}
+}
+.ourteam-test {
+	color: var(--main-text-col);
+
+	font-family: var(--font-sans);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 150%;
+	@include laptop {
+		font-size: 18px;
+	}
+}
+
+.ourteam-swiper-wrapper {
+	position: relative;
+	height: 432px;
+	@include laptop {
+		width: 802px;
+	}
+}
+.our-team-swiper {
+	margin: 0 auto;
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	width: 1026px;
+	@include laptop {
+		// top: -56px;
+		// left: 320px;
+	}
+}
+.ourteaam-swiper-card {
+	cursor: pointer;
+	width: 326px;
+	height: 432px;
+	& > img {
+		margin-bottom: 24px;
+		width: 326px;
+		height: 346px;
+		display: block;
+		overflow: hidden;
+		border-radius: 50px 0px;
+		background: linear-gradient(
+			0deg,
+			rgba(10, 173, 239, 0.08) 0%,
+			rgba(10, 173, 239, 0.08) 100%
+		);
+	}
+}
+.ourteam-swiper-card-title {
+	margin-bottom: 8px;
+	color: var(--black);
+	font-family: var(--font-sans);
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 140%;
+}
+
+.ourteam-swiper-card-text {
+	color: var(--black);
+	font-family: var(--font-sans);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 140%;
+	text-transform: uppercase;
+}
+.ourteam-swiper-button-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	margin-top: 24px;
+}
+.ourteam-swiper-button-prev {
+	cursor: pointer;
+	width: 36px;
+	height: 36px;
+	& > svg {
+		transition: fill 250ms var(--cubic);
+	}
+	@include hover {
+		& > svg {
+			fill: var(--light-blue);
+		}
+	}
+}
+
+.ourteam-swiper-button-next {
+	cursor: pointer;
+	width: 36px;
+	height: 36px;
+	transform: rotateZ(180deg);
+	& > svg {
+		transition: fill 250ms var(--cubic);
+	}
+	@include hover {
+		& > svg {
+			fill: var(--light-blue);
+		}
+	}
+}
+.ourteam-swiper-button-prev::after,
+.ourteam-swiper-button-next::after {
+	display: none;
+}
+.top-button {
+	display: none;
+
+	@include laptop {
+		display: flex;
+		justify-content: flex-start;
+	}
+}
+.bot-button {
+	display: flex;
+	@include laptop {
+		display: none;
+	}
+}
