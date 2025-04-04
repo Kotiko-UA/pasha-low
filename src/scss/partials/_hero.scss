@@ -2,7 +2,7 @@
 	padding-top: 14px;
 	padding-bottom: 26px;
 	@media screen and (max-width: 767px) {
-		background-image: url('/wp-content/themes/blankslate/img/images/hero-mob-v2.jpeg');
+		background-image: url('./img/hero-mob-v2.jpeg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: bottom left 57%;
@@ -11,7 +11,7 @@
 	@include tablet {
 		border-bottom-right-radius: 16px;
 		border-bottom-left-radius: 16px;
-		background-image: url('/wp-content/themes/blankslate/img/images/hero-desktop-v6.jpeg');
+		background-image: url('./img/hero-desktop-v6.jpeg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: top;
@@ -136,9 +136,6 @@
 
 	border-radius: 16px;
 	background: rgba(255, 255, 255, 0.17);
-}
-
-.nav-link-icon-phone {
 }
 
 .hero-text-wrap {
