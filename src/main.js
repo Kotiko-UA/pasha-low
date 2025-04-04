@@ -1,1 +1,5 @@
-import './style.css'
+import './js/show-more.js'
+import './js/menu.js'
+import './js/swiper.js'
+import './js/micromodal-config.js'
+import './js/logo-animation.js'
